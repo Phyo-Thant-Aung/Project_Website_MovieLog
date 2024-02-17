@@ -1,0 +1,16 @@
+# Movie Log
+#### Video Demo: https://youtu.be/vXI43r4SM-k
+#### Description:
+I am an avid movies fan and watch a lot of them. Sometimes, I lose track of which movies I have watched and which ones I have not. Therefore, I thought of designing a web application where me as a user would be able to record down the movies that I have finished watching on the go, and later come back and see the list. A simple but useful application.
+Hence, I decided to design a web application called ‘Movie Log’. The idea started big, but the implementation was proven hard due to the requirements of Account creation, Log In & Log Out, Database connection, HTML page design, taking user input and displaying them.
+I have included a reference YouTube video that I used to get the inspiration from and build the application that I wanted to build.
+In this application I call 'Movie Log' (base.html), a user will be able to create an account in Sign Up page (sign_up.html), log into his/her account in Login page (login.html), and also Sign Out. User Sign Up, Log In and Log Out are fully functioning.
+Flask, Python, SQL, HTML and Javascript are used in this application.
+To make sure each user has their own data, database.db is built to store each user created and then their inputs are linked with user ids. The database information can be found in models.py.
+After logging in, a user will see a page called Movie Log (movie_log.html) where he or she will be able to record down his or her movies in the text input field. These entries are also stored into the database, retrieved and displayed back on the Movie Log page (movie_log.html).
+Deletion of entries is also implemented, in case a user made a mistake or wants to remove an entry. If a user has made a mistake, he or she will be able to delete the entry by clicking on the ‘x’ button right beside the list. This is implemented as a delete_note() function in views.py using Javascript and json.
+Views.py is also implemented to make sure that the user will not see certain pages when not logged in, or when logged out.
+Other implementations include making sure passwords are matching when signing up, not allowing the user to log in when it is incorrect password, not allowing to key in a movie when it’s just a single word. When these restrictions are faced by the user, they are alerted with flash messages that are implemented in views.py and auth.py.
+There are many improvements I wanted to make to this application. Firstly, I would make the application so that a user will be able to key in not just the movie name, but also the date he or she watched the movie, the genre of the movie, what rating he or she would give to the movie, and maybe more depending on the requirements arisen throughout the usage. Implementing this would require having multiple text fields for input, multiple posting to the database and multiple fetching and displaying as a table on the HTML. This was found to be tougher than expected.
+Other improvements would be the User Interface, the look and feel of the application could be better.
+Although it is a simple application, I hope this shows the effort and dedication I have put into the project. Thank you!
